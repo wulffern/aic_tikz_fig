@@ -57,5 +57,5 @@ clean:
 	-rm *.log
 	-rm *.blg
 	-rm *.dvi
-	-rm *.pdf
-	-rm *.eps
+	#-rm *.pdf
+	#-rm *.eps
