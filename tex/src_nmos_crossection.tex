@@ -1,0 +1,42 @@
+% colors
+
+\begin{tikzpicture}
+
+    % styles
+    \tikzstyle{subs} = [line width=1pt,draw=black!80]
+    \tikzstyle{ndiff} = [thick,draw=active,fill=active]
+    \tikzstyle{cut} = [line width=1pt,draw=cut,fill=cut]
+    \tikzstyle{mOne} = [line width=1pt,draw=mOne,fill=mOne]
+    \tikzstyle{poly} = [line width=1pt,draw=poly,fill=poly]
+    \tikzstyle{dashed} = [trans,dashed,draw=vert]
+
+
+    \fill[ndiff] (2,2) rectangle (4,4) ++(-0,-0) node
+         [anchor=north east] {$n+$};
+    \fill[ndiff] (6,2) rectangle (8,4) ++(-0,-0) node
+         [anchor=north east] {$n+$};
+    \fill[ndiff] (0.5,2) rectangle (1.5,4) ++(-0,-0) node
+         [anchor=north east] {$p+$};
+    \draw[subs] (0,1) rectangle (9,4)  ++(-0,-0) node
+         [anchor=north east] {$p+$};;
+    \draw[subs] (4,4) rectangle (6,4.2);
+    \fill[poly] (3.8,4.2) rectangle (6.2,4.8);
+
+    
+    \fill[cut] (6.7,4) rectangle (7.3,6);
+    \fill[cut] (2.7,4) rectangle (3.3,6);
+    \fill[cut] (4.7,4.8) rectangle (5.3,6);
+
+    \fill[cut] (0.7,4) rectangle (1.3,6);
+    
+    \fill[mOne] (2,6) rectangle (3.5,7) ++(-0,-0) node
+         [anchor=south east] {Source};
+    \fill[mOne] (6.5,6) rectangle (8,7) ++(-0,-0) node
+         [anchor=south east] {Drain};
+    \fill[mOne] (3.8,6) rectangle (6.2,7) ++(-0,-0) node
+         [anchor=south east] {Gate};
+    \fill[mOne] (0.5,6) rectangle (1.5,7) ++(-0,-0) node
+         [anchor=south east] {Bulk};
+
+         
+\end{tikzpicture}

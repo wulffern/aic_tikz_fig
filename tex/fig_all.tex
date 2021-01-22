@@ -1,0 +1,73 @@
+%\documentclass[varwidth=true, border=0pt, convert={size=640x}]{standalone}
+%\usepackage{pgf,circuitikz,tikz}
+%\usetikzlibrary{circuits.logic.US}
+%\ctikzset{tripoles/mos style/arrows}
+%\ctikzset{tripoles/pmos style/emptycircle}
+%\usepackage{ifthen}
+%\pagestyle{empty}
+%\begin{document}
+
+\input{../tex/fig_header}
+
+
+\begin{circuitikz}[american,circuit logic US, thick,
+transform shape,circuit ee IEC,set make contact graphic= var make
+contact IEC graphic]
+
+
+
+\input{../tex/ckt_lib.tex}
+
+%- Line 1
+\begin{scope}[shift={(0cm,0cm)},scale=0.8]
+  \draw \cmStd (cStart) ++(0.5,-0.5) node [anchor=north] { cmStd};
+\end{scope}
+
+\begin{scope}[shift={(0cm,-6cm)},scale=0.8]
+  \draw \anaQuestion (cStart) ++(0.5,-0.5) node [anchor=north] {anaQuestion};
+\end{scope}
+
+\begin{scope}[shift={(3cm,0cm)},scale=0.8]
+  \draw \cmSfCascode (cStart) ++(0.5,-0.5) node [anchor=north] { cmSfCascode};
+\end{scope}
+
+\begin{scope}[shift={(6cm,0cm)},scale=0.8]
+  \draw \cmCascode (cStart) ++(0.5,-0.5) node [anchor=north] { cmCascode };
+\end{scope}
+
+\begin{scope}[shift={(9cm,0cm)},scale=0.8]
+  \pgfextra{\ctikzset{bipoles/resistor/width=.4,bipoles/resistor/height=.15}}
+  \draw  \cmRCascode (cStart) ++(0.5,-0.5) node [anchor=north] { cmRCascode};
+\end{scope}
+
+\begin{scope}[shift={(0cm,4cm)},scale=0.8]
+  \pgfextra{\ctikzset{bipoles/resistor/width=.4,bipoles/resistor/height=.15}}
+  \draw  \esdGgnmos (cStart) ++(0.5,-0.5) node [anchor=north] { esdGgnmos};
+\end{scope}
+
+
+%\begin{scope}[shift={(3cm,4cm)},scale=0.8]
+%  \pgfextra{\ctikzset{bipoles/resistor/width=.4,bipoles/resistor/height=.15}}
+%  \draw  \trSmallSignal (cStart) ++(0.5,-0.5) node [anchor=north] { trSmallsignal};
+%\end{scope}
+
+\begin{scope}[shift={(3cm,4cm)},scale=0.8]
+  \pgfextra{\ctikzset{bipoles/resistor/width=.4,bipoles/resistor/height=.15}}
+  \draw  \trNmos (cStart) ++(0.5,-0.5) node [anchor=north] { trNmos};
+\end{scope}
+
+
+\begin{scope}[shift={(6cm,4cm)},scale=0.8]
+  \pgfextra{\ctikzset{bipoles/resistor/width=.4,bipoles/resistor/height=.15}}
+  \draw  \filtLP (cStart) ++(0.5,-0.5) node [anchor=north] { filtLP};
+\end{scope}
+
+
+
+
+\end{circuitikz}
+
+%\input{../tex/src_nmos_crossection}
+
+
+\end{document}
